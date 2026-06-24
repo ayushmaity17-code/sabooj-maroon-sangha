@@ -258,7 +258,7 @@ function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-[70%_center]"
         />
       </motion.div>
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(28,7,13,.88)_0%,rgba(28,7,13,.46)_48%,rgba(15,12,11,.15)_100%)]" />
@@ -903,7 +903,10 @@ function Committee() {
 
 function Events() {
   return (
-    <section id="events" className="bg-maroon px-5 py-24 text-ivory sm:px-8 sm:py-32 lg:px-12 lg:py-40">
+    <section
+  id="events"
+  className="bg-maroon px-5 py-16 text-ivory sm:px-8 sm:py-24 lg:px-12 lg:py-40"
+>
       <div className="mx-auto max-w-[1340px]">
         <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           <div>
@@ -937,7 +940,9 @@ function Events() {
             >
               <div
                 className={`relative overflow-hidden ${
-                  event.featured ? "h-72 lg:h-full lg:min-h-[34rem]" : "h-72"
+                 event.featured
+  ? "h-[22rem] sm:h-[28rem] lg:h-full lg:min-h-[34rem]"
+  : "h-72"
                 }`}
               >
                 <Image
@@ -945,7 +950,7 @@ function Events() {
                   alt=""
                   fill
                   sizes={event.featured ? "(max-width: 1024px) 100vw, 50vw" : "(max-width: 1024px) 100vw, 33vw"}
-                  className="object-cover transition duration-700 group-hover:scale-105"
+                  className="object-contain bg-maroon/10 transition duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/55 to-transparent" />
               </div>
